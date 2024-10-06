@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins,sans-serif;
+    font-weight: 500;
+}
+:root{
+    --bg-color:#01757a;
+    --second-bg-color:#3e2922;
+    --main-color:#f6c0ab;
+    --text-color:#f6ebcf;
+}
+body{
+    color: var(--text-color);
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background:linear-gradient(150deg,var(--bg-color),var(--second-bg-color));
+    display: flex;
+    flex-direction: column;
+}
+.header{
+    padding: 1rem;
+    text-align: center;
+}
+.header h1{
+    font-weight: 700;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+.header h4{
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--main-color);
+}
+.name-date-amount{
+    padding: 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+.name,.date,.amount{
+    padding: 0.5rem;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    gap:2rem;
+}
+.name,.date{
+    padding-left: 12rem;
+}
+.name label,.date label,.amount label{
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+.name{
+    grid-column: 1 / 3;
+    gap: 1.1rem;
+}
+.name-date-amount input{
+    height: 2rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    font-weight: 600;
+    border: 2px solid var(--main-color);
+    background-color: transparent;
+    color: var(--text-color);
+}
+#name-box{
+    width: 55rem;
+}
+#date-box{
+    width: 23rem;
+}
+#amount-box{
+    width: 21.3rem;
+}
+
+#add-btn{
+    padding: 0.5rem 1.5rem;
+    font-weight: 700;
+    font-size: 1.3rem;
+    align-self: center;
+    border-radius: 2rem;
+    border: 2px solid var(--main-color);
+    color: var(--text-color);
+    background-color: var(--main-color);
+    /* margin-bottom: 1.5rem; */
+}
+.table-container{
+    text-align: center;
+}
+.table-container table{
+    width: 90%;
+    border-collapse: collapse;
+    margin: 1.5rem auto;
+}
+th,td{
+    border: 1px solid var(--main-color);
+    padding: 8px;
+    text-align: left;
+}
+th{
+    background-color: var(--main-color);
+    font-weight: 600;
+}
+td{
+    font-weight: bold;
+}
+.delete-btn{
+    padding: 5px 10px;
+    background-color: hsl(0, 100%, 70%);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: center;
+}
